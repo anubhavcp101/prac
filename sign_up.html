@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link href="sign_up_style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="signUpInfo">
+    <h3>Enter Your Information</h3>
+    
+        <form>
+        <fieldset>
+            Name: <input type="text" name="name"  id="name" class="inbox"></br></br>
+            Email: <input type="email" name="email"  id="email" class="inbox"></br></br>
+            Confirm Email: <input type="email" name="confirm_email"  id="confirm_email" class="inbox"></br></br>
+            Password: <input type="password" name="password"  id="password" class="inbox"></br></br>
+            Confirm Password: <input type="password" name="confirm_password"  id="confirm_password" class="inbox"></br></br>
+            Gender:</br>
+            <input type="radio" name="gender" value="male" >Male</br>
+            <input type="radio" name="gender" value="female" >Female</br>
+            <input type="radio" name="gender" value="prefer not to say" >Prefer not to say</br></br>
+            Country: <select name="country"></br>
+                <option>India</option>
+                <option>Bangladesh</option>
+                <option>Nepal</option>
+                <option>Myanmmar</option>
+                <option>Bhutan</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>Europe</option>
+            </select></br></br>
+            Interest: </br>
+            <input type="checkbox" name="interest" value="outside_game" class="checkbox">Outside games</br>
+            <input type="checkbox" name="interest" value="board_game" class="checkbox">Board games</br>
+            <input type="checkbox" name="interest" value="mobile_gaming" class="checkbox">Mobile gaming</br>
+            <input type="checkbox" name="interest" value="News" class="checkbox">News</br>
+            <input type="checkbox" name="interest" value="Music" class="checkbox">Music</br></br>
+
+            About me: </br>
+            <textarea name="about_me" class="inbox"></textarea></br>
+            
+            <input type="submit" name="submit" value="Submit your information" id="submit">
+
+
+        </fieldset>
+    </form>
+    </div>
+    <div class="sideGame">
+        <h3>Side Game</h3>
+        <div class="sideBackArea">
+            <p id="move">Your Move: </p>
+            <p id="oppMove">Opponent Move: </p>
+            <p id="result">Result: </p>
+            <button id="scissor" onclick="play(1)">Scissor</button></br>
+            <button id="rock" onclick="play(0)">Rock</button></br>
+            <button id="paper" onclick="play(2)">Paper</button></br>
+        </div>
+    </div>
+    <!-- <p id="mismatch_mail"></p>
+    <p id="mismatch_passwd"></p>-->
+    <!-- <button id="btn" onclick="isokay()">IS OKAY</button></br> -->
+    <script src="sign_up_script.js"></script>
+
+    
+
+</body>
+</html>

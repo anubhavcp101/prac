@@ -1,0 +1,35 @@
+body{
+    background-image: url("images/night-sky.jpg");
+    /* background-color: aquamarine; */
+    background-size: cover;
+    color: gold;
+}
+#backArea{
+    background-color: rgba(250,235,215,0.2);
+    width: 50%;
+    height: 20em;
+    border-radius: 30px;
+    padding: 2em;
+    box-shadow: .5px .5px 10px 10px rgb(236, 88, 204);
+    font-family: 'Shantell Sans', cursive;
+    font-size: 35px;
+    margin-left: 30px;
+    margin-bottom: 2em;
+    float: left;
+    
+}
+h2{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 200%;
+    font-weight: 550;
+    color: rgb(255,255,255);
+    background-color: rgba(255, 255, 255, 0.2);
+    width: fit-content;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 30px;
+}
+ul{
+    list-style-image: url("images/puzzle\ \(2\).png");
+    
+}

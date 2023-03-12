@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    flex-flow: column nowrap;
+}
+.header{
+    background-color: rgb(23, 174, 204);
+    display: block;
+    text-align: center;
+    align-content: center;
+    position: relative;
+}
+.headbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: sticky;
+    
+}
+ul li{
+    list-style-type: none;
+    border-top: 2px solid whitesmoke;
+    padding: .5rem;
+}
+.ham{
+    width: 32px;
+    height:32px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.head-icon,.head-icon::after,.head-icon::before{
+    height: 5px;
+    width: 40px;
+    background-color: coral;
+    border-radius: 5px;
+    position:absolute;
+    transition: all 0.5s;
+
+}
+.head-icon::before, .head-icon::after{
+    content: ""; /* to make visible, it important one remember it*/
+}
+.head-icon::before{
+    transform: translate(-20px,-12px);
+}
+.head-icon::after{
+    transform: translate(-20px,12px);
+}
+nav{
+    display: none;
+    transform-origin: top center;
+    animation: nav-bar 0.5s ease-in-out forwards;
+}
+
+@keyframes nav-bar {
+    0%{
+        transform: scale(0);
+    }
+    90%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+nav ul li:hover, li:focus{
+    transition: all 0.3s;
+    transform: scale(1.2);
+}
+:is(.header:hover,.header:focus) .head-icon{
+    background-color: transparent;
+}
+:is(.header:hover,.header:focus) .head-icon::after{
+    transform: translateX(-20px) rotate(45deg);
+
+}
+:is(.header:hover,.header:focus) .head-icon::before{
+    transform: translateX(-20px) rotate(-45deg);
+}
+:is(.header:hover,.header:focus) nav{
+    display: block;
+}
+.col1,.col2{
+    display: flex;
+    flex-flow: row nowrap;
+    
+    /* border-bottom: 3px dashed black; */
+}
+.col1{
+    border-bottom: 3px dashed black;
+}
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    /* flex-grow: 10; */
+}
+.col1 div, .col2 div{
+   
+   padding: .5rem;
+   position: relative;
+}
+.image,.side-image{
+    width: 20px;
+    height: 20px;
+    background-color: #a3c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.img-header{
+    display: flex;
+    flex-flow: row nowrap;
+    
+}
+ #nav2,  #nav4, #nav5{
+    border-left: 2px solid black;
+}
+.main-aside{
+    display:flex;
+    flex-flow: row nowrap;
+}
+.side-bar{
+    position: relative;
+    border-left: 2px dotted black;
+    height: 100%;
+    padding: .5rem;
+}
+.img-sider{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+footer{
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+    border-top: 2px solid black;
+    background-color: coral;
+}
